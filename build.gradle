@@ -7,6 +7,7 @@ apply plugin: 'jacoco'
 apply plugin: 'signing'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 archivesBaseName = "picorouter"
 
@@ -26,3 +27,5 @@ dependencies {
   testCompile "junit:junit:4.11"
   testCompile "org.assertj:assertj-core:3.1.0"
 }
+
+check.dependsOn jacocoTestReport
