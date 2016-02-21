@@ -33,4 +33,16 @@ public class PicoRouterTest {
     assertThat(values.get("bar").get()).isEqualTo("123");
   }
 
+  @Test
+  public void equality_rules() throws Exception {
+    PicoRouter cocoOne = PicoRouter.of("coco");
+    PicoRouter cocoTwo = PicoRouter.of("coco");
+    assertThat(cocoOne).isEqualTo(cocoTwo);
+    assertThat(cocoOne.hashCode()).isEqualTo(cocoTwo.hashCode());
+  }
+
+  @Test
+  public void nice_toString() throws Exception {
+    assertThat(PicoRouter.of("coco/tero").toString()).isEqualTo("coco/tero");
+  }
 }
