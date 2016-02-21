@@ -4,3 +4,11 @@ PicoRouter is a HTTP URL path router for your projects
 # Download
 
 You can use PicoRouter with JitPack.io
+
+You just need to follow [these instructions](https://jitpack.io/) with these coordinates:
+
+ - groupId: com.github.ggalmazor
+ - artifactId: picorouter
+ - version: 1.0.1
+ 
+The latest version is **1.0.1**
