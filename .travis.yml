@@ -6,4 +6,4 @@ before_install:
   - sudo apt-get install --only-upgrade -y oracle-java8-installer
   - pip install --user codecov
 after_success:
-  - codecov
+  - codecov --file build/test-results/*.xml
