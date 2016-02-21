@@ -37,6 +37,9 @@ public class PicoRouterTest {
   public void equality_rules() throws Exception {
     PicoRouter cocoOne = PicoRouter.of("coco");
     PicoRouter cocoTwo = PicoRouter.of("coco");
+    assertThat(cocoOne).isNotEqualTo(null);
+    assertThat(cocoOne).isNotEqualTo("chuchu");
+    assertThat(cocoOne).isEqualTo(cocoOne);
     assertThat(cocoOne).isEqualTo(cocoTwo);
     assertThat(cocoOne.hashCode()).isEqualTo(cocoTwo.hashCode());
   }
